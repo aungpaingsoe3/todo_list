@@ -24,4 +24,13 @@ public class EventsToDo {
     public String getDue() {
         return due;
     }
+
+    public void changeDone(){
+        if (done == true){
+            done = false;
+        }
+        else {
+            done = true;
+        }
+    }
 }
