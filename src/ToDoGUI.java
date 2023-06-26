@@ -14,7 +14,7 @@ public class ToDoGUI {
         testButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                testFrame.setVisible(false);
+                testFrame.dispose();
                 JFrame newFrame = new JFrame();
                 newFrame.setSize(200,200);
                 JTextField aField = new JTextField("6/25/2023 - SUNDAY");
