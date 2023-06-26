@@ -1,13 +1,9 @@
-import java.time.*;
-import java.util.*;
-
-
-public class EventsToDo {
+public class Task {
     private String eventName;
     private String due;
     private boolean done;
 
-    public EventsToDo (String name, String d){
+    public Task(String name, String d){
         eventName = name;
         due = d;
         done = false;
@@ -25,12 +21,12 @@ public class EventsToDo {
         return due;
     }
 
-    public void changeDone(){
-        if (done == true){
-            done = false;
+    public void setDone(){
+        if (done == false){
+            done = true;
         }
         else {
-            done = true;
+            done = false;
         }
     }
 }
