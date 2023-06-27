@@ -8,8 +8,8 @@ import java.util.*;
 import javax.swing.border.Border;
 import javax.swing.event.*;
 public class OpenerGUI extends JFrame{
-    public static int FRAME_WIDTH = 750;
-    public static int FRAME_HEIGHT = 200;
+    public static int FRAME_WIDTH = 650;
+    public static int FRAME_HEIGHT = 170;
     public OpenerGUI(){
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -25,6 +25,7 @@ public class OpenerGUI extends JFrame{
         headerPanel.setLayout(new BorderLayout());
         headerPanel.add(space, BorderLayout.SOUTH);
         headerPanel.add(header, BorderLayout.NORTH);
+        headerPanel.setBackground(Color.WHITE);
 
         // Options Direction texts
         JPanel optionsPanel = new JPanel();
@@ -35,10 +36,12 @@ public class OpenerGUI extends JFrame{
         optionsPanel.setLayout(new BorderLayout());
         optionsPanel.add(space2, BorderLayout.SOUTH);
         optionsPanel.add(options, BorderLayout.NORTH);
+        optionsPanel.setBackground(Color.WHITE);
 
         textPanels.setLayout(new BorderLayout());
         textPanels.add(headerPanel, BorderLayout.NORTH);
         textPanels.add(optionsPanel, BorderLayout.WEST);
+        textPanels.setBackground(Color.WHITE);
 
         // Sign-in and Create Account buttons
         Font button = new Font("SansSerif", Font.PLAIN, 14);
@@ -54,12 +57,14 @@ public class OpenerGUI extends JFrame{
         buttons.add(signin);
         buttons.add(Box.createHorizontalStrut(65));
         buttons.add(createAcc);
+        buttons.setBackground(Color.WHITE);
 
         setLayout(new BorderLayout());
         add(textPanels, BorderLayout.NORTH);
         add(buttons, BorderLayout.CENTER);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+
     }
 
 }
