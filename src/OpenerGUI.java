@@ -14,6 +14,7 @@ public class OpenerGUI extends JFrame{
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
+        // Header texts
         JPanel textPanels = new JPanel();
         JPanel headerPanel = new JPanel();
         JLabel space = new JLabel("          ", JLabel.CENTER);
@@ -25,6 +26,7 @@ public class OpenerGUI extends JFrame{
         headerPanel.add(space, BorderLayout.SOUTH);
         headerPanel.add(header, BorderLayout.NORTH);
 
+        // Options Direction texts
         JPanel optionsPanel = new JPanel();
         JLabel space2 = new JLabel("          ", JLabel.LEFT);
         JLabel options = new JLabel("Please choose one of the options below to continue.", JLabel.LEFT);
@@ -38,6 +40,7 @@ public class OpenerGUI extends JFrame{
         textPanels.add(headerPanel, BorderLayout.NORTH);
         textPanels.add(optionsPanel, BorderLayout.WEST);
 
+        // Sign-in and Create Account buttons
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         JButton signin = new JButton("SIGN IN");
         signin.setPreferredSize(new Dimension(100,50));
