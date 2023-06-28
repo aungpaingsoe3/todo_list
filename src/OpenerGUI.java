@@ -45,16 +45,16 @@ public class OpenerGUI extends JFrame{
 
         // Sign-in and Create Account buttons
         Font button = new Font("SansSerif", Font.PLAIN, 14);
-        JButton signin = new JButton("SIGN IN");
-        signin.setPreferredSize(new Dimension(100,50));
-        signin.setFont(button);
+        JButton signIn = new JButton("SIGN IN");
+        signIn.setPreferredSize(new Dimension(100,50));
+        signIn.setFont(button);
         JButton createAcc = new JButton("CREATE ACCOUNT");
         createAcc.setPreferredSize(new Dimension(150,50));
         createAcc.setFont(button);
         JPanel buttons = new JPanel();
         buttons.setPreferredSize(new Dimension(200,50));
         buttons.setLayout(new FlowLayout());
-        buttons.add(signin);
+        buttons.add(signIn);
         buttons.add(Box.createHorizontalStrut(65));
         buttons.add(createAcc);
         buttons.setBackground(Color.WHITE);
