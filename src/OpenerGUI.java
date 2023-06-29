@@ -62,6 +62,7 @@ public class OpenerGUI extends JFrame{
         setLayout(new BorderLayout());
         add(textPanels, BorderLayout.NORTH);
         add(buttons, BorderLayout.CENTER);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
