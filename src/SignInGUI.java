@@ -15,6 +15,7 @@ public class SignInGUI extends JFrame{
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
+        // Header texts
         JPanel text = new JPanel();
         JLabel space = new JLabel("          ");
         JLabel direction = new JLabel("Please enter your username and your password below to continue.");
@@ -26,6 +27,7 @@ public class SignInGUI extends JFrame{
         text.add(space, BorderLayout.CENTER);
         text.setBackground(Color.LIGHT_GRAY);
 
+        // Username input field
         JPanel inputPanel = new JPanel();
         JPanel usernamePanel = new JPanel();
         JLabel usernameLabel = new JLabel("Username: ");
@@ -38,6 +40,7 @@ public class SignInGUI extends JFrame{
         usernamePanel.add(username);
         usernamePanel.setBackground(Color.LIGHT_GRAY);
 
+        // Password input field
         JPanel passwordPanel = new JPanel();
         JLabel passwordLabel = new JLabel("Password: ");
         passwordLabel.setBackground(Color.LIGHT_GRAY);
@@ -54,6 +57,7 @@ public class SignInGUI extends JFrame{
         inputPanel.add(passwordPanel, BorderLayout.CENTER);
         inputPanel.setBackground(Color.LIGHT_GRAY);
 
+        // Sign in button
         JButton signIn = new JButton("SIGN IN");
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         signIn.setFont(button);

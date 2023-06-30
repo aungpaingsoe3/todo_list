@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.font.*;
 import java.awt.geom.*;
-import java.util.*;
 import javax.swing.border.Border;
 import javax.swing.event.*;
 public class OpenerGUI extends JFrame{
@@ -25,7 +24,7 @@ public class OpenerGUI extends JFrame{
         headerPanel.setLayout(new BorderLayout());
         headerPanel.add(space, BorderLayout.SOUTH);
         headerPanel.add(header, BorderLayout.NORTH);
-        headerPanel.setBackground(Color.WHITE);
+        headerPanel.setBackground(Color.LIGHT_GRAY);
 
         // Options Direction texts
         JPanel optionsPanel = new JPanel();
@@ -36,28 +35,40 @@ public class OpenerGUI extends JFrame{
         optionsPanel.setLayout(new BorderLayout());
         optionsPanel.add(space2, BorderLayout.SOUTH);
         optionsPanel.add(options, BorderLayout.NORTH);
-        optionsPanel.setBackground(Color.WHITE);
+        optionsPanel.setBackground(Color.LIGHT_GRAY);
 
         textPanels.setLayout(new BorderLayout());
         textPanels.add(headerPanel, BorderLayout.NORTH);
         textPanels.add(optionsPanel, BorderLayout.WEST);
-        textPanels.setBackground(Color.WHITE);
+        textPanels.setBackground(Color.LIGHT_GRAY);
 
-        // Sign-in and Create Account buttons
+        // Sign-in button
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         JButton signIn = new JButton("SIGN IN");
         signIn.setPreferredSize(new Dimension(100,50));
         signIn.setFont(button);
+        signIn.addActionListener(e -> {
+            this.dispose();
+            SignInGUI login = new SignInGUI();
+        });
+
+        // Create Account button
         JButton createAcc = new JButton("CREATE ACCOUNT");
         createAcc.setPreferredSize(new Dimension(150,50));
         createAcc.setFont(button);
+        createAcc.addActionListener(e -> {
+            this.dispose();
+            CreateAccountGUI newAcc = new CreateAccountGUI();
+        });
+
+        // Panel of buttons
         JPanel buttons = new JPanel();
         buttons.setPreferredSize(new Dimension(200,50));
         buttons.setLayout(new FlowLayout());
         buttons.add(signIn);
         buttons.add(Box.createHorizontalStrut(65));
         buttons.add(createAcc);
-        buttons.setBackground(Color.WHITE);
+        buttons.setBackground(Color.LIGHT_GRAY);
 
         setLayout(new BorderLayout());
         add(textPanels, BorderLayout.NORTH);

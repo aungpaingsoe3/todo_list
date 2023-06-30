@@ -15,6 +15,7 @@ public class CreateAccountGUI extends JFrame {
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
+        // Header text
         JPanel headerText = new JPanel();
         JLabel space = new JLabel("          ");
         JLabel direction = new JLabel("Please enter the following information to create an account.");
@@ -26,6 +27,7 @@ public class CreateAccountGUI extends JFrame {
         headerText.add(space, BorderLayout.CENTER);
         headerText.setBackground(Color.LIGHT_GRAY);
 
+        // Name field
         JPanel input = new JPanel();
         JPanel namePanel = new JPanel();
         JLabel nameLabel = new JLabel("Name: ");
@@ -39,6 +41,7 @@ public class CreateAccountGUI extends JFrame {
         namePanel.add(name);
         namePanel.setBackground(Color.LIGHT_GRAY);
 
+        // Username field
         JPanel usernamePanel = new JPanel();
         JLabel usernameLabel = new JLabel("Username: ");
         usernameLabel.setBackground(Color.LIGHT_GRAY);
@@ -51,6 +54,7 @@ public class CreateAccountGUI extends JFrame {
         usernamePanel.add(username);
         usernamePanel.setBackground(Color.LIGHT_GRAY);
 
+        // Password field
         JPanel passwordPanel = new JPanel();
         JLabel passwordLabel = new JLabel("Password: ");
         passwordLabel.setBackground(Color.LIGHT_GRAY);
@@ -63,6 +67,7 @@ public class CreateAccountGUI extends JFrame {
         passwordPanel.add(password);
         passwordPanel.setBackground(Color.LIGHT_GRAY);
 
+        // Combines Username and Password field
         JPanel uAndP = new JPanel();
         uAndP.setLayout(new BorderLayout());
         uAndP.add(usernamePanel, BorderLayout.NORTH);
@@ -73,6 +78,7 @@ public class CreateAccountGUI extends JFrame {
         input.add(uAndP, BorderLayout.CENTER);
         input.setBackground(Color.LIGHT_GRAY);
 
+        // Create Account button
         JButton createAcc = new JButton("CREATE ACCOUNT");
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         createAcc.setFont(button);
