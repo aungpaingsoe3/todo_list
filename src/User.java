@@ -39,4 +39,22 @@ public class User {
     public String getUserInfo(){
         return name + " | " + username + " | " + password;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (this.getClass() != obj.getClass())
+            return false;
+
+        User toCheck = (User) obj;
+        if ((this.name == toCheck.name) && (this.username == toCheck.username) && (this.password == toCheck.password)) {
+           return true;
+        }
+        return false;
+
+
+    }
 }
