@@ -34,4 +34,13 @@ public class ToDo {
         u.getTasks().add(toAdd);
     }
 
+    public void removeAllTask(User u){
+        ArrayList<Task> tasks = getTask(u);
+        for (Task t: tasks){
+            if (t.isDone()){
+                tasks.remove(t);
+            }
+        }
+    }
+
 }

@@ -22,7 +22,7 @@ public class Task {
     }
 
     public void setDone(){
-        if (done == false){
+        if (!done){
             done = true;
         }
         else {

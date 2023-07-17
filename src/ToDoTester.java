@@ -20,5 +20,6 @@ public class ToDoTester {
 //        System.out.println(u1.equals(null));
 //        SignInGUI signin = new SignInGUI();
 //        CreateAccountGUI createAcc = new CreateAccountGUI();
+        AddGUI add = new AddGUI();
     }
 }
