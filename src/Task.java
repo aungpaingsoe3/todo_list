@@ -9,6 +9,12 @@ public class Task {
         done = false;
     }
 
+    public Task(String name, String date, boolean d){
+        eventName = name;
+        due = date;
+        done = d;
+    }
+
     public String getEventName(){
         return eventName;
     }
