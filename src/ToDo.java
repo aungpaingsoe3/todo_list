@@ -66,6 +66,8 @@ public class ToDo {
                 nameInfo = br.readLine();
                 if (nameInfo == null) {
                     done = true;
+                    System.out.println();
+                    System.out.println("User File Loading is Done!");
                 }
                 else {
                     String[] splitInfo = nameInfo.split(" | ");
@@ -76,7 +78,7 @@ public class ToDo {
             fr.close();
         }
         catch (FileNotFoundException x) {
-            System.out.println("File is not found: " + userFile);
+            System.out.println("User File is not found: " + userFile);
         }
     }
 
@@ -102,6 +104,8 @@ public class ToDo {
                 nameInfo = br.readLine();
                 if (nameInfo == null) {
                     done = true;
+                    System.out.println();
+                    System.out.println("Task File Loading is Done!");
                 }
                 else {
                     String[] splitInfo = nameInfo.split(" | ");
@@ -113,7 +117,7 @@ public class ToDo {
             fr.close();
         }
         catch (FileNotFoundException x) {
-            System.out.println("File is not found: " + taskFile);
+            System.out.println("Task File is not found: " + taskFile);
         }
     }
 
@@ -127,7 +131,6 @@ public class ToDo {
                 pw.printf("%s | %s | %b | %s | %s\n", t.getEventName(), t.getDue(), t.isDone(), u.getUsername(), u.getPassword());
             }
         }
-
         pw.close();
         fw.close();
     }

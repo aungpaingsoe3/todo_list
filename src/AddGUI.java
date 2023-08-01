@@ -65,7 +65,7 @@ public class AddGUI extends JFrame {
         setLayout(new BorderLayout());
         add(headerText, BorderLayout.NORTH);
         add(input, BorderLayout.CENTER);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 

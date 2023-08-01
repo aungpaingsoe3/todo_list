@@ -10,8 +10,10 @@ import javax.swing.event.*;
 public class CreateAccountGUI extends JFrame {
     public static int FRAME_WIDTH = 650;
     public static int FRAME_HEIGHT = 250;
+    private ToDo todo;
 
-    public CreateAccountGUI() {
+    public CreateAccountGUI(ToDo td) {
+        todo = td;
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
@@ -83,6 +85,10 @@ public class CreateAccountGUI extends JFrame {
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         createAcc.setFont(button);
         createAcc.setPreferredSize(new Dimension(100, 50));
+        createAcc.addActionListener(e -> {
+            td.addUser(name.getText(), username.getText(), new String(password.getPassword()));
+            this.dispose();
+        });
         input.add(createAcc, BorderLayout.SOUTH);
 
         setLayout(new BorderLayout());

@@ -11,7 +11,13 @@ public class SignInGUI extends JFrame{
 
     public static int FRAME_WIDTH = 650;
     public static int FRAME_HEIGHT = 250;
-    public SignInGUI(){
+
+    private User current;
+    private ToDo td;
+
+    public SignInGUI(ToDo todo){
+        td = todo;
+
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
@@ -62,6 +68,10 @@ public class SignInGUI extends JFrame{
         Font button = new Font("SansSerif", Font.PLAIN, 14);
         signIn.setFont(button);
         signIn.setPreferredSize(new Dimension(100, 50));
+        signIn.addActionListener(e -> {
+            current = td.getUser(username.getText(), new String(password.getPassword()));
+            this.dispose();
+        });
         inputPanel.add(signIn, BorderLayout.SOUTH);
 
         setLayout(new BorderLayout());

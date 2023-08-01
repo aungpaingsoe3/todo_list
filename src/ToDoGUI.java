@@ -8,8 +8,10 @@ import javax.swing.event.*;
 public class ToDoGUI {
 
     private OpenerGUI open;
-    public ToDoGUI(){
-        open = new OpenerGUI();
+    private ToDo td;
+    public ToDoGUI(ToDo todo){
+        td = todo;
+        open = new OpenerGUI(td);
 //        JFrame testFrame = new JFrame();
 //        testFrame.setSize(200,200);
 //        JButton testButton = new JButton("Click here");

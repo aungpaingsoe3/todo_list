@@ -9,7 +9,11 @@ import javax.swing.event.*;
 public class OpenerGUI extends JFrame{
     public static int FRAME_WIDTH = 650;
     public static int FRAME_HEIGHT = 170;
-    public OpenerGUI(){
+    private CreateAccountGUI newAcc;
+    private SignInGUI login;
+    private ToDo todo;
+    public OpenerGUI(ToDo td){
+        todo = td;
         setTitle("To-Do List");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
@@ -49,7 +53,7 @@ public class OpenerGUI extends JFrame{
         signIn.setFont(button);
         signIn.addActionListener(e -> {
             this.dispose();
-            SignInGUI login = new SignInGUI();
+            login = new SignInGUI(todo);
         });
 
         // Create Account button
@@ -58,7 +62,7 @@ public class OpenerGUI extends JFrame{
         createAcc.setFont(button);
         createAcc.addActionListener(e -> {
             this.dispose();
-            CreateAccountGUI newAcc = new CreateAccountGUI();
+            newAcc = new CreateAccountGUI(todo);
         });
 
         // Panel of buttons
